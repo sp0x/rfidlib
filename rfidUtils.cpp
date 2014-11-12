@@ -116,31 +116,14 @@ int * rfidUtils::readBlock(int num, size_t & sz,  rfid_key_type key_type){
 
 int* rfidUtils::cmd(prog_uchar cmd, prog_uchar * cmdData, size_t datalen, size_t respLen){
 	unsigned char command_buf[30];
-	unsigned char i;
 	unsigned char cmdLen = this->getCmdLen(cmd);
-	command_buf[0] = 0xAB; /** data frame head */
-	command_buf[1] = cmdLen; /** command lenght */
-	command_buf[2] = cmd; /** COMMAND */
+	memcpy(&command_buf[0], 	[0xAB, cmdLen, cmd]		, 3 * sizeof(unsigned char));
 	memcpy(&command_buf[3] , cmdData, datalen * sizeof(unsigned char)); // Copy DATA block
-	int * cmdbytes =this->parseInput(command_buf,cmdLen);
-
-
-	/** frame key area initialize */
-	for (i = 0; i<8; i++)
-	{
-		//command_buf[5 + i] = key[i];
+	int * cmdOps =this->parseInput(command_buf,cmdLen);
+	for (int i = 0; i < cmdLen; i += 2){
+		int c = this->serial->write(cmdOps[i] * 16 + cmdOps[i + 1]);
 	}
-
-	/** frame data area initilize */
-	for (i = 0; i<16; i++)
-	{
-		//command_buf[12 + i] = string[i];
-	}
-	/** send frame through serial port*/
-	for (i = 0; i<3; i++)
-	{
-		this->write(command_buf[i]);
-	}
+	//this->comlen = 0; // reset comlen because all bytes have been written
 	Serial.println("Written to card");
 }
 
