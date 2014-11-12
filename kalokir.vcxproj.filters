@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="_core">
+      <UniqueIdentifier>{d6dea681-e27a-429d-a4c8-ed0f428c54e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries">
+      <UniqueIdentifier>{cdcbf866-f7a4-4fa1-845c-bcf660e4f9ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\DHTlib">
+      <UniqueIdentifier>{4440634f-3314-45fc-9e6d-b60eff7d7283}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kalokir.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Visual Micro\.kalokir.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="std.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Arduino.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\binary.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Client.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\HardwareSerial.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\IPAddress.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\new.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Platform.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Print.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Printable.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Server.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Stream.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Udp.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\USBAPI.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\USBCore.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\USBDesc.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\WCharacter.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\wiring_private.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\WString.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="g:\ides\arduino\hardware\arduino\variants\standard\pins_arduino.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\DHTlib\dht.h">
+      <Filter>_libraries\DHTlib</Filter>
+    </ClInclude>
+    <ClInclude Include="rfidUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="std.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\CDC.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\HardwareSerial.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\HID.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\IPAddress.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\main.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\new.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\Print.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\Stream.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\Tone.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\USBCore.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\WInterrupts.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\wiring.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\wiring_analog.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\wiring_digital.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\wiring_pulse.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\wiring_shift.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\WMath.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\WString.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\DHTlib\dht.cpp">
+      <Filter>_libraries\DHTlib</Filter>
+    </ClCompile>
+    <ClCompile Include="rfidUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

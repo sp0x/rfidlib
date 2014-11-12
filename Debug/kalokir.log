@@ -1,0 +1,942 @@
+﻿  WString.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(152): error C2143: syntax error : missing ';' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(152): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(152): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(153): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(153): error C2556: 'int &String::copy(const char *,unsigned int)' : overloaded function differs only by return type from 'String &String::copy(const char *,unsigned int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(186) : see declaration of 'String::copy'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(153): error C2371: 'String::copy' : redefinition; different basic types
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(186) : see declaration of 'String::copy'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(185): error C2143: syntax error : missing ';' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(185): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(185): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(186): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(186): error C2556: 'int &String::operator =(const String &)' : overloaded function differs only by return type from 'String &String::operator =(const String &)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(83) : see declaration of 'String::operator ='
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(186): error C2371: 'String::operator =' : redefinition; different basic types
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(83) : see declaration of 'String::operator ='
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(209): error C2143: syntax error : missing ';' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(209): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(209): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(210): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(210): error C2556: 'int &String::operator =(const char *)' : overloaded function differs only by return type from 'String &String::operator =(const char *)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(84) : see declaration of 'String::operator ='
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(210): error C2371: 'String::operator =' : redefinition; different basic types
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(84) : see declaration of 'String::operator ='
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(290): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(290): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(293): error C2065: 'rhs' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(293): error C2228: left of '.buffer' must have class/struct/union
+          type is 'unknown-type'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(293): error C2228: left of '.len' must have class/struct/union
+          type is 'unknown-type'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(319): error C2084: function 'StringSumHelper &operator +(const StringSumHelper &,int)' already has a body
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(119) : see previous definition of '+'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(530): error C2143: syntax error : missing ';' before 'String::substring'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(530): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(530): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(531): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(531): error C2556: 'int String::substring(unsigned int) const' : overloaded function differs only by return type from 'String String::substring(unsigned int) const'
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(161) : see declaration of 'String::substring'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(531): error C2371: 'String::substring' : redefinition; different basic types
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(161) : see declaration of 'String::substring'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(535): error C2143: syntax error : missing ';' before 'String::substring'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(535): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(535): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(536): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(536): error C2556: 'int String::substring(unsigned int,unsigned int) const' : overloaded function differs only by return type from 'String String::substring(unsigned int,unsigned int) const'
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(162) : see declaration of 'String::substring'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(536): error C2371: 'String::substring' : redefinition; different basic types
+          g:\ides\arduino\hardware\arduino\cores\arduino\wstring.h(162) : see declaration of 'String::substring'
+g:\ides\arduino\hardware\arduino\cores\arduino\wstring.cpp(547): error C2264: 'String::operator =' : error in function definition or declaration; function not called
+  WMath.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  USBCore.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(197): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(214): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(218): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(307): error C4980: '__value' : use of this keyword requires /clr:oldSyntax command line option
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(307): error C2059: syntax error : '__value'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(309): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(322): error C3630: error when processing the token '__value'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(322): fatal error C1190: managed targeted code requires a '/clr' option
+  Tone.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(133): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(133): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(133): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(133): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(133): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(141): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(141): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(141): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(141): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(141): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(161): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(161): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(161): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(161): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(161): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(162): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(162): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(162): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(162): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(162): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(163): error C2043: illegal break
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(167): error C2046: illegal case
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(173): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(173): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(173): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(173): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(173): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(174): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(174): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(174): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(174): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(174): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(175): error C2043: illegal break
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(179): error C2046: illegal case
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(185): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(185): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(185): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(185): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(185): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(186): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(186): error C2373: 'timer2_pin_mask' : redefinition; different type modifiers
+          g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(68) : see declaration of 'timer2_pin_mask'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(186): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(186): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(186): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(186): error C2447: '{' : missing function header (old-style formal list?)
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(186): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(187): error C2059: syntax error : 'break'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(231): error C2059: syntax error : '}'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(231): error C2143: syntax error : missing ';' before '}'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(232): error C2143: syntax error : missing ';' before '}'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(232): error C2059: syntax error : '}'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(235): error C2059: syntax error : '}'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(235): error C2143: syntax error : missing ';' before '}'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(242): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(242): error C2447: '{' : missing function header (old-style formal list?)
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(243): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(259): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(263): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(268): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(274): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(279): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(285): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(290): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(318): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(322): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(328): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(450): error C2059: syntax error : 'bad suffix on number'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(450): error C2146: syntax error : missing ')' before identifier 'b11111000'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(450): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(484): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(484): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(484): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(484): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(484): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(535): warning C4003: not enough actual parameters for macro 'ISR'
+g:\ides\arduino\hardware\arduino\cores\arduino\tone.cpp(536): error C2447: '{' : missing function header (old-style formal list?)
+  Stream.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(197): warning C4305: '*=' : truncation from 'double' to 'float'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(209): warning C4244: 'return' : conversion from 'long' to 'float', possible loss of data
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(247): error C2143: syntax error : missing ';' before 'Stream::readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(247): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(247): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(248): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(249): error C2146: syntax error : missing ';' before identifier 'ret'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(249): error C2065: 'ret' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(253): error C2065: 'ret' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(256): error C2065: 'ret' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(259): error C2143: syntax error : missing ';' before 'Stream::readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(259): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(259): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(260): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(261): error C2146: syntax error : missing ';' before identifier 'ret'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(261): error C2065: 'ret' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(265): error C2065: 'ret' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.cpp(268): error C2065: 'ret' : undeclared identifier
+  Print.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(47): error C2059: syntax error : '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(47): error C2143: syntax error : missing ';' before '{'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(47): error C2143: syntax error : missing ')' before ';'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(47): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(47): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(54): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(54): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(57): error C2065: 's' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(57): error C2228: left of '.length' must have class/struct/union
+          type is 'unknown-type'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(58): error C2065: 's' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(91): warning C4244: 'argument' : conversion from 'long' to 'uint8_t', possible loss of data
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(106): warning C4244: 'argument' : conversion from 'unsigned long' to 'uint8_t', possible loss of data
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(134): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(134): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(136): error C2065: 's' : undeclared identifier
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(218): warning C4244: 'initializing' : conversion from 'unsigned long' to 'char', possible loss of data
+g:\ides\arduino\hardware\arduino\cores\arduino\print.cpp(263): error C2668: 'Print::print' : ambiguous call to overloaded function
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(65): could be 'size_t Print::print(const Printable &)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(64): or       'size_t Print::print(double,int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(63): or       'size_t Print::print(unsigned long,int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(62): or       'size_t Print::print(long,int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(61): or       'size_t Print::print(unsigned int,int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(60): or       'size_t Print::print(int,int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(59): or       'size_t Print::print(unsigned char,int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(58): or       'size_t Print::print(char)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(57): or       'size_t Print::print(const char [])'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): or       'size_t Print::print(const int)'
+          g:\ides\arduino\hardware\arduino\cores\arduino\print.h(55): or       'size_t Print::print(const __FlashStringHelper *)'
+          while trying to match the argument list '(int)'
+  new.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\arduino\cores\arduino\new.cpp(27): error C2084: function 'void __cxa_pure_virtual(void)' already has a body
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(40) : see previous definition of '__cxa_pure_virtual'
+  main.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\arduino\cores\arduino\main.cpp(15): warning C4551: function call missing argument list
+  IPAddress.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  HID.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(197): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(214): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(218): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(307): error C4980: '__value' : use of this keyword requires /clr:oldSyntax command line option
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(307): error C2059: syntax error : '__value'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(309): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(322): error C3630: error when processing the token '__value'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(322): fatal error C1190: managed targeted code requires a '/clr' option
+  HardwareSerial.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\arduino\cores\arduino\hardwareserial.cpp(115): warning C4003: not enough actual parameters for macro 'ISR'
+g:\ides\arduino\hardware\arduino\cores\arduino\hardwareserial.cpp(121): error C2447: '{' : missing function header (old-style formal list?)
+g:\ides\arduino\hardware\arduino\cores\arduino\hardwareserial.cpp(218): warning C4003: not enough actual parameters for macro 'ISR'
+g:\ides\arduino\hardware\arduino\cores\arduino\hardwareserial.cpp(220): error C2447: '{' : missing function header (old-style formal list?)
+  CDC.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(197): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(214): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(218): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(307): error C4980: '__value' : use of this keyword requires /clr:oldSyntax command line option
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(307): error C2059: syntax error : '__value'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(309): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(322): error C3630: error when processing the token '__value'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\eeprom.h(322): fatal error C1190: managed targeted code requires a '/clr' option
+  dht.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(13): warning C4005: '__AVR_ATmega328p__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328p__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(14): warning C4005: '__AVR_ATmega328P__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR_ATmega328P__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(16): warning C4005: 'ARDUINO_MAIN' : macro redefinition
+          command-line arguments :  see previous definition of 'ARDUINO_MAIN'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(17): warning C4005: '__AVR__' : macro redefinition
+          command-line arguments :  see previous definition of '__AVR__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(18): warning C4005: '__avr__' : macro redefinition
+          command-line arguments :  see previous definition of '__avr__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(20): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(27): warning C4005: '__asm__' : macro redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(22) : see previous definition of '__asm__'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stddef.h(214): error C2371: 'size_t' : redefinition; different basic types
+          c:\users\sp0x\documents\arduino\kalokir\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(106): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2072: 'div' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(152): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'div_t (int,int)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2072: 'ldiv' : initialization of a function
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(158): error C2440: 'initializing' : cannot convert from 'const char [12]' to 'ldiv_t (long,long)'
+          There are no conversions to function types, although there are conversions to references or pointers to functions
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(278): error C3646: '__ATTR_NORETURN__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(290): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(319): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\stdlib.h(338): error C3646: '__ATTR_MALLOC__' : unknown override specifier
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(336): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(337): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(413): error C2143: syntax error : missing ')' before ':'
+g:\ides\arduino\hardware\tools\avr\avr\include\math.h(414): error C2059: syntax error : ')'
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\pgmspace.h(123): warning C4091: 'typedef ' : ignored on left of 'void' when no variable is declared
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: '[' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\avr\include\avr\interrupt.h(110): error C2010: ']' : unexpected in macro formal parameter list
+g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\stdarg.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(56): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\print.h(68): error C2143: syntax error : missing ',' before '&'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C2146: syntax error : missing ';' before identifier 'readString'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(85): warning C4183: 'readString': missing return type; assumed to be a member function returning 'int'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C2146: syntax error : missing ';' before identifier 'readStringUntil'
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+g:\ides\arduino\hardware\arduino\cores\arduino\stream.h(86): warning C4183: 'readStringUntil': missing return type; assumed to be a member function returning 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2146: syntax error : missing ';' before identifier 'readln'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(21): error C2086: 'int String' : redefinition
+          c:\users\sp0x\documents\arduino\kalokir\visual micro\.kalokir.vsarduino.h(42) : see declaration of 'String'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(24): error C2228: left of '.toInt' must have class/struct/union
+          type is 'int'
+c:\users\sp0x\documents\arduino\kalokir\kalokir.ino(50): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  Generating Code...
