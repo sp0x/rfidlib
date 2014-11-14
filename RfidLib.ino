@@ -1,4 +1,3 @@
-#include <dht.h>
 #include <SoftwareSerial.h> 
 #include "std.h"
 #include "rfidUtils.h"
