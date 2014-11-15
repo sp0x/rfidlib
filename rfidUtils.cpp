@@ -1,12 +1,15 @@
 #include "Arduino.h"
 #include "rfidUtils.h"
 
+
+
 //fidUtils::mySerial = new SoftwareSerial(PIN_RX, PIN_TX);
-#define MAX_RESPONSE_LEN 64
-#define OPSIZE (sizeof(unsigned char))
-#define MEMSZ(ops) ( OPSIZE * (ops) )
-
-
+int toInt(uchar * b, size_t offset){
+	return (b[offset + 0] << 24) | (b[offset + 1] << 16) | (b[offset + 2] << 8) | (b[offset + 3]);
+}
+short toShort(uchar * b, size_t offset){
+	return (b[offset +  1] << 8) | (b[offset + 3]);
+}
 
 #pragma region Construct
 rfidUtils::rfidUtils(uint8_t rx, uint8_t tx)
@@ -16,16 +19,20 @@ rfidUtils::rfidUtils(uint8_t rx, uint8_t tx)
 	this->serial->begin(9600);
 	this->comlen=0;
 	this->out_flag = 0;
+	unlock();
 }
 rfidUtils::rfidUtils(){
-
+	unlock();
 }
 #pragma endregion
 
 
 
-void rfidUtils::setMode(rfid_mode mode){
+bool rfidUtils::setMode(rfid_mode mode){
+	if (mode<DETECT || mode>STORE) return false; // unsupported mode
+	this->MODE = mode;
 	this->write((uint8_t)mode);
+	return true;
 }
 
 #pragma region IO
@@ -35,28 +42,55 @@ size_t rfidUtils::write(const char *chr){
 size_t rfidUtils::write(uint8_t uint){
 	return this->serial->write(uint);
 }
+size_t rfidUtils::write(uint8_t * buff, size_t len){
+	return this->serial->write(buff, len);
+}
 
 int rfidUtils::read(){
-	return this->serial->read();
+	if (!this->available()){
+		Serial.println("Can't read from unavailable stream!");
+		return -1;
+	} else 
+		return this->serial->read();
 }
-int * rfidUtils::readAll(size_t & len){
-	int out_flag = 0;
-	int * redNfo = new int[MAX_RESPONSE_LEN];
-	len = 0;
+
+
+int rfidUtils::GetInput(int*& outputBuff){
+	if (this->locked) return RFID_READ_LOCKED;
+	return this->readAll(outputBuff);
+}
+/*
+Reads all output from the module and returns the lenght of the read data.
+*/
+int rfidUtils::readAll(int*& outputBuff){
+	bool out_flag = false;
+	static int* buffer=(int*)calloc(MAX_RESPONSE_LEN, sizeof(int));
+	int tmpLen=0;
 	while (this->available()) {
-		if (out_flag == 0) Serial.println("response: ");
 		int c = this->read();
-		if (c<16) Serial.print("0");
-		Serial.print(c, HEX); //Display the Serial Number in HEX
-		Serial.print(" ");
-		out_flag = 1;
-		redNfo[len++] = c;
+		if (c != 0xff){
+			if (out_flag == 0) Serial.println("response: ");
+			if (c < 16) Serial.print("0");
+			Serial.print(c, HEX); Serial.print(" "); 		
+		}
+		out_flag = true; buffer[tmpLen++] = c;
 	}
-	if (out_flag >0) {
-		Serial.println();
-		out_flag = 0;
+	if (out_flag) Serial.println();
+	if (tmpLen == 1){
+		if (buffer[0] == 0xFF && this->MODE != DETECT) Serial.print(buffer[0]);  Serial.println("INVALID COMMAND!");
 	}
-	return redNfo;
+	if (tmpLen > 0)//there was output
+	{	
+		if (outputBuff == NULL){
+			outputBuff = buffer;
+		}
+		else{
+			memcpy(outputBuff, buffer, sizeof(int) * tmpLen);
+			Serial.print("Ptr2: ");  Serial.println((int)outputBuff);
+			free(buffer);
+		}
+	}
+	return tmpLen;
 }
 
 int rfidUtils::available(){
@@ -66,7 +100,7 @@ int rfidUtils::available(){
 /*
 Parses input by Serial.read()
 */
-int* rfidUtils::parseInput(byte * cmdbytes, size_t & size){
+int* rfidUtils::parseInput(byte * cmdbytes, int & size){
 	int* out = new int[size];
 	int ix2 = 0;
 	size_t outputSize = size;
@@ -102,6 +136,9 @@ int rfidUtils::parseInput(byte c){
 
 
 #pragma region Commands
+/*
+Appends a new hex value to the command buffer.
+*/
 void rfidUtils::appendCmdHex(int cmdByte){
 	if (cmdByte<0) return;
 	this->CMD[this->comlen++] = cmdByte;
@@ -110,47 +147,52 @@ void rfidUtils::appendCmdHex(int cmdByte){
 /*
 Writes the current command in the cache to the device serial.
 */
-int * rfidUtils::commitCommand(size_t &rlen){
+int * rfidUtils::commitCommand(int &rlen){
+	int *buff;
 	for (int i = 0; i<comlen; i += 2){
 		int c = this->serial->write(CMD[i] * 16 + CMD[i + 1]);
 	}
 	this->comlen = 0; // reset comlen because all bytes have been written
-	return this->readAll(rlen);
+	rlen=this->readAll(buff);
+	return buff;
 }
+
+/*Executes the command and returns true or false, depending if it failed. */
 bool rfidUtils::writeCommand(int * cmd, size_t cmd_size){
 	for (int i = 0; i<cmd_size; i += 2){
 		int c = this->serial->write(cmd[i] * 16 + cmd[i + 1]);
 	}
+	return true;
 }
-int * rfidUtils::executeInput(byte * input, size_t inputsz, size_t & response_len){
+/*Executes an input command, from a raw byte input array. Returns the response.*/
+int * rfidUtils::executeInput(byte * input, int inputsz, int & response_len){
+	int *buff;
 	if (input != NULL && inputsz>0){
 		int *opcodes=this->parseInput(input, inputsz);
-		for (int i = 0; i < inputsz; i++){
-			Serial.print(opcodes[i]);  Serial.print(" ");
-		}
+		Serial.print("Writing total "); Serial.print(inputsz); Serial.println(" bytes");
 		this->writeCommand(opcodes, inputsz);
 	}
-	return this->readAll(response_len);
+	response_len=this->readAll(buff);
+	return buff;
 }
 
 /*
 Executes a given cmd
 */
-int* rfidUtils::cmd(rfid_cmd cmdFlag, prog_uchar * cmdData, size_t datalen, size_t & respLen){
+int* rfidUtils::cmd(rfid_cmd cmdFlag, prog_uchar * cmdData, size_t datalen, int & respLen){
 	prog_uchar command_buf[30];
-	size_t cmdLen = this->getCmdLen(cmdFlag);
+	int *rbuff;
+	int cmdLen = this->getCmdLen(cmdFlag);
 	prog_uchar cmdBytes[3] = { 0xAB, cmdLen, cmdFlag };
-	memcpy(&command_buf[0], cmdBytes,  MEMSZ(3) ) ;
-	memcpy(&command_buf[3], cmdData, MEMSZ(datalen) ); // Copy DATA block
+	memcpy(&command_buf[0], cmdBytes,  OPSZ(3) ) ;
+	memcpy(&command_buf[3], cmdData, OPSZ(datalen)); // Copy DATA block
 	int * cmdOps =this->parseInput( command_buf, cmdLen);
 	for (int i = 0; i < cmdLen; i += 2){
 		int c = this->serial->write(cmdOps[i] * 16 + cmdOps[i + 1]);
 	}
 
-	return this->readAll(respLen);
-
-	//this->comlen = 0; // reset comlen because all bytes have been written
-	Serial.println("Written to card");
+	respLen= this->readAll(rbuff);
+	return rbuff;
 }
 
 size_t rfidUtils::getCmdLen(rfid_cmd cmd){
@@ -170,15 +212,35 @@ size_t rfidUtils::getCmdLen(rfid_cmd cmd){
 
 
 #pragma region Command utils 
+void rfidUtils::lock(){
+	this->locked = true;
+}
+void rfidUtils::unlock(){
+	this->locked = !true;
+}
+
 
 rfid_card_type rfidUtils::getCardType(){
-	/*int cmdBytes = new int[6]{ 0xA, 0xB, 0x0, 0x2, 0x0, 0x1 };
-	int *cmd = this->parseInput(cmdBytes, 6);
-	this->writeCommand(cmd, 6);
-	*/
+	uint8_t cmdBytes[3] = { 0xAB, 0x02, 0x01 };
+	// SHOULD SYNCLOCK READ, BECAUSE CURRENT READ NEEDS TO BE BLOCKED!
+	this->lock();
+	this->write(cmdBytes,3);
+	int* buff=(int*)calloc(32, sizeof(int));
+	memset(buff, 0, MEMSZ((int)32));
+	Serial.print("Ptr1: "); Serial.println((int)buff);
+	int len= this->readAll(buff);
+	this->unlock();
+	// RELEASE SYNCLOCK
+	Serial.print("Ptr3: "); Serial.println((int)buff);
+	Serial.print("Len: "); Serial.println(len);
+	for (int i = 0; i < len+5; i++){
+		Serial.println((int)buff[i], HEX);
+	}
 	
-	//TODO: readAll();
-
+	return (rfid_card_type)0;
+	rfid_card_type kt= (rfid_card_type)toShort((prog_uchar*)buff[3], 0);
+	free(buff);
+	return kt;
 }
 
 
@@ -187,7 +249,7 @@ rfid_card_type rfidUtils::getCardType(){
 */
 int * rfidUtils::readBlock(int num, size_t & sz, rfid_key_type key_type){
 	prog_uchar data[10] = { (prog_uchar)key_type, 1, 2, 3, 4 };
-	size_t rlen;
+	int rlen;
 	int *resp = this->cmd(Read, data, 10, rlen);
 	return resp;
 }

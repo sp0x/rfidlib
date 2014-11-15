@@ -24,12 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="kalokir.ino" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Visual Micro\.kalokir.vsarduino.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="std.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -94,6 +88,12 @@
       <Filter>_libraries\DHTlib</Filter>
     </ClInclude>
     <ClInclude Include="rfidUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visual Micro\.RfidLib.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MemoryFree\MemoryFree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -161,5 +161,11 @@
     <ClCompile Include="rfidUtils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\MemoryFree\MemoryFree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RfidLib.ino" />
   </ItemGroup>
 </Project>

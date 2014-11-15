@@ -44,8 +44,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>g:\ides\arduino\hardware\arduino\cores\arduino;g:\ides\arduino\hardware\arduino\variants\standard;g:\ides\arduino\libraries\SoftwareSerial;g:\ides\arduino\libraries\SoftwareSerial\utility;C:\Users\Sp0x\Documents\Arduino\libraries\DHTlib;C:\Users\Sp0x\Documents\Arduino\libraries\DHTlib\utility;g:\ides\arduino\libraries;g:\ides\arduino\hardware\arduino\libraries;C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\Sp0x\Documents\Arduino\libraries;g:\ides\arduino\hardware\tools\avr\avr\include\;g:\ides\arduino\hardware\tools\avr\avr\include\avr\;g:\ides\arduino\hardware\tools\avr\avr\;g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>C:\Users\Sp0x\Documents\Arduino\kalokir\Visual Micro\.kalokir.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>g:\ides\arduino\hardware\arduino\cores\arduino;g:\ides\arduino\hardware\arduino\variants\standard;g:\ides\arduino\libraries\SoftwareSerial;g:\ides\arduino\libraries\SoftwareSerial\utility;g:\ides\arduino\libraries;g:\ides\arduino\hardware\arduino\libraries;C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\Sp0x\Documents\Arduino\libraries;g:\ides\arduino\hardware\tools\avr\avr\include\;g:\ides\arduino\hardware\tools\avr\avr\include\avr\;g:\ides\arduino\hardware\tools\avr\avr\;g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>G:\Dev\Arduino\RfidLib\Visual Micro\.RfidLib.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;ARDUINO=105;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -68,12 +68,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="kalokir.ino">
-      <FileType>CppCode</FileType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\libraries\DHTlib\dht.h" />
+    <ClInclude Include="..\MemoryFree\MemoryFree.h" />
     <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Arduino.h" />
     <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\binary.h" />
     <ClInclude Include="g:\ides\arduino\hardware\arduino\cores\arduino\Client.h" />
@@ -97,10 +93,11 @@
       <FileType>CppCode</FileType>
     </ClInclude>
     <ClInclude Include="std.h" />
-    <ClInclude Include="Visual Micro\.kalokir.vsarduino.h" />
+    <ClInclude Include="Visual Micro\.RfidLib.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\libraries\DHTlib\dht.cpp" />
+    <ClCompile Include="..\MemoryFree\MemoryFree.cpp" />
     <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\CDC.cpp" />
     <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\HardwareSerial.cpp" />
     <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\HID.cpp" />
@@ -121,6 +118,11 @@
     <ClCompile Include="g:\ides\arduino\hardware\arduino\cores\arduino\WString.cpp" />
     <ClCompile Include="rfidUtils.cpp" />
     <ClCompile Include="std.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RfidLib.ino">
+      <FileType>CppCode</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
