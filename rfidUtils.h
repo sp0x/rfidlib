@@ -1,10 +1,14 @@
 #ifndef RFID_UTILS
 #define RFID_UTILS
+#include "Arduino.h"
+#include <SoftwareSerial.h>
 #define MAX_RESPONSE_LEN 64
 #define RFID_READ_LOCKED -2
 #define OPSIZE (sizeof(unsigned char))
 #define OPSZ(ops) ( OPSIZE * (ops) )
 #define MEMSZ(var) ( sizeof(var) * var)
+
+
 
 typedef unsigned char uchar;
 
@@ -26,12 +30,6 @@ enum rfid_cmd{
 	RESET_CFG, RESET
 };
 
-
-
-
-
-#include <SoftwareSerial.h> 
-#include "Arduino.h"
 
 /*Converts a byte array to 4byte WORD */
 int toInt(uchar * arr, size_t offset);
@@ -86,7 +84,7 @@ class rfidUtils
 	int readAll(int*& buffer);
 	uint8_t _pin_tx;
 	uint8_t _pin_rx;
-	
+
 
 
 };

@@ -1,8 +1,6 @@
 #include "Arduino.h"
 #include "rfidUtils.h"
 
-
-
 //fidUtils::mySerial = new SoftwareSerial(PIN_RX, PIN_TX);
 int toInt(uchar * b, size_t offset){
 	return (b[offset + 0] << 24) | (b[offset + 1] << 16) | (b[offset + 2] << 8) | (b[offset + 3]);
@@ -15,7 +13,6 @@ short toShort(uchar * b, size_t offset){
 rfidUtils::rfidUtils(uint8_t rx, uint8_t tx)
 {
 	this->serial = new SoftwareSerial(rx, tx);
-	this->serial->listen();
 	this->serial->begin(9600);
 	this->comlen=0;
 	this->out_flag = 0;
@@ -31,7 +28,10 @@ rfidUtils::rfidUtils(){
 bool rfidUtils::setMode(rfid_mode mode){
 	if (mode<DETECT || mode>STORE) return false; // unsupported mode
 	this->MODE = mode;
-	this->write((uint8_t)mode);
+	size_t res =this->write((uint8_t)mode);
+	if (res == 0){
+		Serial.print("Could not write!");
+	}
 	return true;
 }
 
@@ -56,7 +56,10 @@ int rfidUtils::read(){
 
 
 int rfidUtils::GetInput(int*& outputBuff){
-	if (this->locked) return RFID_READ_LOCKED;
+	if (this->locked) {
+		Serial.println("RFID IS LOCKED!");
+		return RFID_READ_LOCKED;
+	}
 	return this->readAll(outputBuff);
 }
 /*
@@ -81,6 +84,7 @@ int rfidUtils::readAll(int*& outputBuff){
 	}
 	if (tmpLen > 0)//there was output
 	{	
+		Serial.print(tmpLen);
 		if (outputBuff == NULL){
 			outputBuff = buffer;
 		}
@@ -94,7 +98,8 @@ int rfidUtils::readAll(int*& outputBuff){
 }
 
 int rfidUtils::available(){
-	return this->serial->available();
+	int cnt =this->serial->available();
+	return cnt;
 }
 
 /*
