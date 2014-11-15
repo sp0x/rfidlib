@@ -5,8 +5,8 @@
 int toInt(uchar * b, size_t offset){
 	return (b[offset + 0] << 24) | (b[offset + 1] << 16) | (b[offset + 2] << 8) | (b[offset + 3]);
 }
-short toShort(uchar * b, size_t offset){
-	return (b[offset +  1] << 8) | (b[offset + 3]);
+int toShort(int * b, size_t offset){
+	return (int)((int)b[offset + 0] << 8) | (int)((int)b[offset + 1]);
 }
 
 #pragma region Construct
@@ -84,13 +84,11 @@ int rfidUtils::readAll(int*& outputBuff){
 	}
 	if (tmpLen > 0)//there was output
 	{	
-		Serial.print(tmpLen);
 		if (outputBuff == NULL){
 			outputBuff = buffer;
 		}
 		else{
 			memcpy(outputBuff, buffer, sizeof(int) * tmpLen);
-			Serial.print("Ptr2: ");  Serial.println((int)outputBuff);
 			free(buffer);
 		}
 	}
@@ -137,6 +135,14 @@ int rfidUtils::parseInput(byte c){
 		}
 }
 
+/*
+Blocks the process untill there's new data available.
+*/
+void rfidUtils::waitForResponse(){
+	while (!this->available()){
+		delay(1);
+	}
+}
 #pragma endregion
 
 
@@ -188,14 +194,13 @@ int* rfidUtils::cmd(rfid_cmd cmdFlag, prog_uchar * cmdData, size_t datalen, int 
 	prog_uchar command_buf[30];
 	int *rbuff;
 	int cmdLen = this->getCmdLen(cmdFlag);
+	if (cmdFlag == rfid_cmd::Read) cmdLen = datalen + 2; // LEN+CMD+DATA
 	prog_uchar cmdBytes[3] = { 0xAB, cmdLen, cmdFlag };
+	memset(command_buf, 0, MEMSZ(cmdLen));
 	memcpy(&command_buf[0], cmdBytes,  OPSZ(3) ) ;
 	memcpy(&command_buf[3], cmdData, OPSZ(datalen)); // Copy DATA block
-	int * cmdOps =this->parseInput( command_buf, cmdLen);
-	for (int i = 0; i < cmdLen; i += 2){
-		int c = this->serial->write(cmdOps[i] * 16 + cmdOps[i + 1]);
-	}
-
+	this->write(command_buf, cmdLen + 1);
+	this->waitForResponse();
 	respLen= this->readAll(rbuff);
 	return rbuff;
 }
@@ -225,25 +230,17 @@ void rfidUtils::unlock(){
 }
 
 
+
 rfid_card_type rfidUtils::getCardType(){
 	uint8_t cmdBytes[3] = { 0xAB, 0x02, 0x01 };
-	// SHOULD SYNCLOCK READ, BECAUSE CURRENT READ NEEDS TO BE BLOCKED!
+	
 	this->lock();
 	this->write(cmdBytes,3);
-	int* buff=(int*)calloc(32, sizeof(int));
-	memset(buff, 0, MEMSZ((int)32));
-	Serial.print("Ptr1: "); Serial.println((int)buff);
+	int* buff=(int*)calloc(6, sizeof(int));
+	this->waitForResponse();
 	int len= this->readAll(buff);
 	this->unlock();
-	// RELEASE SYNCLOCK
-	Serial.print("Ptr3: "); Serial.println((int)buff);
-	Serial.print("Len: "); Serial.println(len);
-	for (int i = 0; i < len+5; i++){
-		Serial.println((int)buff[i], HEX);
-	}
-	
-	return (rfid_card_type)0;
-	rfid_card_type kt= (rfid_card_type)toShort((prog_uchar*)buff[3], 0);
+	rfid_card_type kt= (rfid_card_type)toShort(&buff[3], 0);
 	free(buff);
 	return kt;
 }

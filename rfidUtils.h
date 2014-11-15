@@ -16,7 +16,7 @@ enum rfid_mode {
 	DETECT = 1, READ_SERIALS, STORE
 };
 enum rfid_card_type{
-	UltraLight = 0x4040, OneS50 = 0x202, OneS70 = 0x20000, ProX = 0x80000, DESFire = 0x4040003
+	UltraLight = 0x4040, OneS50 = 0x400, OneS70 = 0x200, ProX = 0x80000, DESFire = 0x4040003
 };
 enum rfid_key_type{
 	typeA=0x00	, typeB=0x01
@@ -33,7 +33,7 @@ enum rfid_cmd{
 
 /*Converts a byte array to 4byte WORD */
 int toInt(uchar * arr, size_t offset);
-short toShort(uchar * b, size_t offset);
+int toShort(int * b, size_t offset);
 
 class rfidUtils
 {
@@ -63,6 +63,7 @@ class rfidUtils
 
 	int parseInput(byte input);
 	int* parseInput(byte * cmdbytes, int & size);
+	void waitForResponse();
 #pragma endregion
 
 #pragma region Commands

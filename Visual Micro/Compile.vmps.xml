@@ -9,7 +9,7 @@
       <VCCodeMacros />
     </VCCodeModel>
     <BreakPoints>
-      <BreakPoint Index="1" Name="rfidLib.ino, line 28" Id="9d246b9d-937c-4186-9b1c-8934d18aec99" Enabled="1" Message="{millis()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="millis()&gt;0 || millis()&gt;1" ConditionType="1" CurrentHits="0" File="g:\dev\arduino\rfidlib\rfidlib.ino" FileLine="28" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="250" HitCountType="4" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9d246b9d-937c-4186-9b1c-8934d18aec99'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="1" Name="rfidLib.ino, line 28" Id="6b20dce6-ba4e-4a54-843b-8daf43d67f86" Enabled="1" Message="{freeMemory()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="g:\dev\arduino\rfidlib\rfidlib.ino" FileLine="28" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6b20dce6-ba4e-4a54-843b-8daf43d67f86'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
         <Source>21	    Serial.println("Serial number will be displayed here if a card is detected by the module:\n");
 22	    delay(10);
 23	    rfid.setMode(READ_SERIALS);
@@ -29,7 +29,7 @@
 37	        cmdbuff[cmdsz++] = a;
 </Source>
         <MessageVariables>
-          <MessageVariable Name="millis()" Index="1" />
+          <MessageVariable Name="freeMemory()" Index="1" />
         </MessageVariables>
       </BreakPoint>
     </BreakPoints>

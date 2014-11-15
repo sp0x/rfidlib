@@ -50,14 +50,12 @@ void loop()
             break;
         default:
             rbuff= processCommand(cmdbuff, cmdsz, rbCount);
-            Serial.println("processed command!");
         }
     }
     else
     {
         rbCount = rfid.GetInput(rbuff);
         if (rbCount > 0) {
-            Serial.print("Main read: "); Serial.println(rbCount);
         }
     }
 }
