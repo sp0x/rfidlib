@@ -192,23 +192,30 @@ Executes a given cmd
 */
 int* rfidUtils::cmd(rfid_cmd cmdFlag, prog_uchar * cmdData, size_t datalen, int & respLen){
 	prog_uchar command_buf[30];
-	int *rbuff;
+	static int *rbuff;
 	int cmdLen = this->getCmdLen(cmdFlag);
-	if (cmdFlag == rfid_cmd::Read) cmdLen = datalen + 2; // LEN+CMD+DATA
+	if (cmdFlag == Read) cmdLen = datalen + 2; // LEN+CMD+DATA
 	prog_uchar cmdBytes[3] = { 0xAB, cmdLen, cmdFlag };
 	memset(command_buf, 0, MEMSZ(cmdLen));
 	memcpy(&command_buf[0], cmdBytes,  OPSZ(3) ) ;
-	memcpy(&command_buf[3], cmdData, OPSZ(datalen)); // Copy DATA block
-	this->write(command_buf, cmdLen + 1);
+	if(datalen>0) memcpy(&command_buf[3], cmdData, OPSZ(datalen)); // Copy DATA block
+	this->write(command_buf, cmdLen+1);
 	this->waitForResponse();
-	respLen= this->readAll(rbuff);
+	respLen = this->readAll(rbuff);
+	switch (cmdFlag){
+	case ReadCardType:
+		rbuff[0] = rbuff[3]; rbuff[1] = rbuff[4];
+		rbuff[0]=toShort(rbuff,0);
+		respLen = 2;
+		break;
+	}
 	return rbuff;
 }
 
 size_t rfidUtils::getCmdLen(rfid_cmd cmd){
 	switch (cmd){
 	case 0x01:
-		return 0x01;
+		return 0x02;
 	case 0x02:
 		return 0x02;
 	case 0x03:
@@ -232,17 +239,10 @@ void rfidUtils::unlock(){
 
 
 rfid_card_type rfidUtils::getCardType(){
-	uint8_t cmdBytes[3] = { 0xAB, 0x02, 0x01 };
-	
-	this->lock();
-	this->write(cmdBytes,3);
-	int* buff=(int*)calloc(6, sizeof(int));
-	this->waitForResponse();
-	int len= this->readAll(buff);
-	this->unlock();
-	rfid_card_type kt= (rfid_card_type)toShort(&buff[3], 0);
-	free(buff);
-	return kt;
+	int rlen;
+	int* ret = this->cmd(ReadCardType, NULL, NULL, rlen);
+	if (rlen == 0)return (rfid_card_type)0;
+	return (rfid_card_type)*ret;
 }
 
 
