@@ -30,9 +30,6 @@
     <ClInclude Include="G:\Dev\Arduino\RfidLib\rfidUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="std.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MemoryFree.cpp">

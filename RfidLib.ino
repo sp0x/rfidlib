@@ -64,7 +64,7 @@ void loop()
 int * processCommand(byte*cmd, size_t cmdSz, int & resSz){
     void * cmdPtr;
     int * rbuff;
-    if (memmem(cmdbuff, cmdSz, &"type", 4) != NULL){
+    if (memmem(cmdbuff, cmdSz, &"type", 4)){
         rfid_card_type type = rfid.getCardType();
         switch (type){
         case OneS70:    Serial.println("OneS70"); break;
@@ -76,6 +76,25 @@ int * processCommand(byte*cmd, size_t cmdSz, int & resSz){
             Serial.print("Unknown card type "); Serial.print((int)type);  Serial.println(" !");
         }
     }
+	else if (memmem(cmdbuff, cmdSz, &"serial", 6)){
+		int *serial = rfid.getCardSerial();
+		for (int i = 0; i < 5; i++){
+			Serial.print(serial[i], HEX); Serial.print(" ");
+		}
+		Serial.println("");
+	}
+	else if (memmem(cmdbuff, cmdSz, &"dump", 4)){
+		rfid.printResponse = false;
+		rfid_card_type ktype = rfid.getCardType();
+		for (int i = 0; i < 2; i++){
+			int *ptr=rfid.readBlock(i, ktype, typeA, NULL);
+			Serial.println((int)ptr);
+		}
+		
+	}
+	else if (memmem(cmdbuff, cmdSz, &"quiet", 5)){
+		rfid.printResponse = false;
+	}
     else{
         rbuff = rfid.executeInput(cmdbuff, cmdSz, resSz);
     }

@@ -2,6 +2,8 @@
 #define RFID_UTILS
 #include "Arduino.h"
 #include <SoftwareSerial.h>
+#include "MemoryFree.h"
+
 #define MAX_RESPONSE_LEN 64
 #define RFID_READ_LOCKED -2
 #define OPSIZE (sizeof(unsigned char))
@@ -34,6 +36,7 @@ enum rfid_cmd{
 /*Converts a byte array to 4byte WORD */
 int toInt(uchar * arr, size_t offset);
 int toShort(int * b, size_t offset);
+void printall(int *arr, int len);
 
 class rfidUtils
 {
@@ -41,12 +44,14 @@ class rfidUtils
 	rfidUtils(uint8_t rx, uint8_t tx);
 	rfidUtils();
 #pragma region Variables
+	bool printResponse;
 	bool locked;
 	SoftwareSerial* serial;
 	int CMD[64];
 	int comlen;
 	int out_flag;
 	rfid_mode MODE;
+
 #pragma endregion
 #pragma region Locking
 	void lock();
@@ -58,7 +63,6 @@ class rfidUtils
 	size_t write(uint8_t * buff, size_t len);
 	int read();
 	int GetInput(int*& outputBuff);
-	int* readBlock(int num, size_t & sz, rfid_key_type key_type);
 	int available();
 
 	int parseInput(byte input);
@@ -78,6 +82,9 @@ class rfidUtils
 
 #pragma region Command implementations
 	rfid_card_type getCardType();
+	int * getCardSerial();
+	int * readBlock(int blockNum, rfid_card_type cardType, rfid_key_type keyType, byte key[5]);
+	int * readEEPROM(byte addrHigh, byte addrLow, byte dtLen);
 #pragma endregion
 
 
