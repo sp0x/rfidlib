@@ -21,7 +21,7 @@ void setup()
     Serial.println("Serial number will be displayed here if a card is detected by the module:\n");
     delay(10);
     rfid.setMode(READ_SERIALS);
-    return; //Closed because of previous project
+	return; //Closed because of previous project
 }
 
 byte*cmdbuff = new byte[32];

@@ -13,7 +13,7 @@
         <Source>21	    Serial.println("Serial number will be displayed here if a card is detected by the module:\n");
 22	    delay(10);
 23	    rfid.setMode(READ_SERIALS);
-24	    return; //Closed because of previous project
+24		return; //Closed because of previous project
 25	}
 26	
 27	byte*cmdbuff = new byte[32];

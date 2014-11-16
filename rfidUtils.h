@@ -16,7 +16,7 @@ enum rfid_mode {
 	DETECT = 1, READ_SERIALS, STORE
 };
 enum rfid_card_type{
-	UltraLight = 0x4040, OneS50 = 0x400, OneS70 = 0x200, ProX = 0x80000, DESFire = 0x4040003
+	UltraLight = 0x4400, OneS50 = 0x400, OneS70 = 0x200, ProX = 0x800, DESFire = 0x4403
 };
 enum rfid_key_type{
 	typeA=0x00	, typeB=0x01
@@ -68,9 +68,10 @@ class rfidUtils
 
 #pragma region Commands
 	void appendCmdHex(int cmdByte);
-	int * commitCommand(int &rlen);
+	int *commitCommand(int &rlen);
 	bool writeCommand(int * cmdBytes, size_t cmd_size);
 	int* cmd(rfid_cmd cmdFlag, prog_uchar * cmdData, size_t datalen, int & respLen);
+	int  cmd(rfid_cmd cmdFlag, int &rlen);
 	int* executeInput(byte * input, int inputsz, int & response_len);
 	static size_t getCmdLen(rfid_cmd cmd);
 #pragma endregion
