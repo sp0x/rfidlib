@@ -73,7 +73,7 @@ int rfidUtils::GetInput(int*& outputBuff){
 /*
 Reads all output from the module and returns the lenght of the read data.
 */
-int rfidUtils::readAll(int*& outputBuff){
+int rfidUtils::readAll(int*& outputBuff, char sz){
 	bool out_flag = false;
 	static int* buffer;
 	if (outputBuff == NULL){
@@ -83,6 +83,9 @@ int rfidUtils::readAll(int*& outputBuff){
 	int tmpLen=0;
 	while (this->available()) {
 		int c = this->read();
+		if (sz > -1){
+			if (sz == (tmpLen + 1)) break; //Enough bytes have been red
+		}
 		if (c != 0xff && this->printResponse){
 			if (out_flag == 0) Serial.print("response: ");
 			if (c < 16) Serial.print("0");
@@ -272,6 +275,118 @@ int * rfidUtils::getCardSerial(){
 	return serial;
 }
 
+int * rfidUtils::readSector(int sector, rfid_card_type cType, rfid_key_type kType, byte key[5]){
+#pragma region Validation
+	switch (cType){
+	case OneS50: // 16 sectors * 4 blocks * 16 bytes
+		if (sector > 15){
+			Serial.println("Invalid sector!"); return NULL;
+		}
+		break;
+	case OneS70:
+		break;
+	default:
+		Serial.println("Invalid sector!"); return NULL;
+		break;
+	}
+#pragma endregion
+
+	byte status;
+	byte blockIndex;		// Address of lowest address to dump actually last block dumped)
+	byte nBlocks;		// Number of blocks in sector
+	bool isSectorTrailer;	// Set to true while handling the "last" (ie highest address) in the sector.
+// Each group has access bits [C1 C2 C3]. In this code C1 is MSB and C3 is LSB.
+	// The four CX bits are stored together in a nible cx and an inverted nible cx_.
+	byte c1, c2, c3;		// Nibbles
+	byte c1_, c2_, c3_;		// Inverted nibbles
+	bool invertedError;		// True if one of the inverted nibbles did not match
+	byte g[4];				// Access bits for each of the four groups.
+	byte group;				// 0-3 - active group for access bits
+	bool firstInGroup;		// True for the first block dumped in the group
+	// Determine position and size of sector.
+	if (sector < 32) { // Sectors 0..31 has 4 blocks each
+		nBlocks = 4; blockIndex = sector * nBlocks;
+	}
+	else if (sector < 40) { // Sectors 32-39 has 16 blocks each
+		nBlocks = 16; blockIndex = 128 + (sector - 32) * nBlocks;
+	}
+	else  return 0;// Illegal input, no MIFARE Classic PICC has more than 40 sectors.
+
+	// Dump blocks, highest address first.
+	byte byteCount, blNum;
+	int * buffer = (int*)calloc(16,1);
+	isSectorTrailer = true;
+	for (char blockOffset = nBlocks - 1; blockOffset >= 0; blockOffset--) {
+		blNum = blockIndex + blockOffset;
+		if (isSectorTrailer) {
+			Serial.print(sector < 10 ? "   " : "  "); // Pad with spaces
+			Serial.print(sector); Serial.print("   ");
+		}
+		else Serial.print("       "); 
+		// Block number
+		Serial.print(blNum < 10 ? "   " : (blNum < 100 ? "  " : " ")); // Pad with spaces
+		Serial.print(blNum); Serial.print("  ");
+		buffer = this->readBlock(blNum, cType, kType, key);
+		byteCount = sizeof(buffer);	//read block
+		// Dump data
+		for (byte index = 0; index < 16; index++) {
+			Serial.print(buffer[index] < 0x10 ? " 0" : " ");
+			Serial.print(buffer[index], HEX);
+			if ((index % 4) == 3) {
+				Serial.print(" ");
+			}
+		}
+		// Parse sector trailer data
+		if (isSectorTrailer) {
+			c1 = buffer[7] >> 4;
+			c2 = buffer[8] & 0xF;
+			c3 = buffer[8] >> 4;
+			c1_ = buffer[6] & 0xF;
+			c2_ = buffer[6] >> 4;
+			c3_ = buffer[7] & 0xF;
+			invertedError = (c1 != (~c1_ & 0xF)) || (c2 != (~c2_ & 0xF)) || (c3 != (~c3_ & 0xF));
+			g[0] = ((c1 & 1) << 2) | ((c2 & 1) << 1) | ((c3 & 1) << 0);
+			g[1] = ((c1 & 2) << 1) | ((c2 & 2) << 0) | ((c3 & 2) >> 1);
+			g[2] = ((c1 & 4) << 0) | ((c2 & 4) >> 1) | ((c3 & 4) >> 2);
+			g[3] = ((c1 & 8) >> 1) | ((c2 & 8) >> 2) | ((c3 & 8) >> 3);
+			isSectorTrailer = false;
+		}
+
+		// Which access group is this block in?
+		if (nBlocks == 4) {
+			group = blockOffset;
+			firstInGroup = true;
+		}
+		else {
+			group = blockOffset / 5;
+			firstInGroup = (group == 3) || (group != (blockOffset + 1) / 5);
+		}
+
+		if (firstInGroup) {
+			// Print access bits
+			Serial.print(" [ ");
+			Serial.print((g[group] >> 2) & 1, DEC); Serial.print(" ");
+			Serial.print((g[group] >> 1) & 1, DEC); Serial.print(" ");
+			Serial.print((g[group] >> 0) & 1, DEC);
+			Serial.print(" ] ");
+			if (invertedError) {
+				Serial.print(" Inverted access bits did not match! ");
+			}
+		}
+
+		if (group != 3 && (g[group] == 1 || g[group] == 6)) { // Not a sector trailer, a value block
+			long value = (long(buffer[3]) << 24) | (long(buffer[2]) << 16) | (long(buffer[1]) << 8) | long(buffer[0]);
+			Serial.print(" Value=0x"); Serial.print(value, HEX);
+			Serial.print(" Adr=0x"); Serial.print(buffer[12], HEX);
+		}
+		Serial.println();
+
+	}
+
+
+
+}
+
 /*
 @param blockNum The block number to read. For S50 it's 0-65 and for S70 it's 0-255
 @param cardType The type of the card 
@@ -295,7 +410,11 @@ int * rfidUtils::readBlock(int blockNum, rfid_card_type cardType, rfid_key_type 
 	static int * data = this->cmd(Read, rqdata, 0x8, len);// data is 16 blocks
 	Serial.println(len);
 	for (int i = 0; i < len; i++){
-		Serial.print(String(data[i], HEX)); Serial.print(" ");
+		Serial.print(data[i] < 0x10 ? " 0" : " ");
+		Serial.print(data[i], HEX);
+		if ((i % 4) == 3) {
+			Serial.print(" ");
+		}
 	}
 
 

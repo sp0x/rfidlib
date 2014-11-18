@@ -84,13 +84,14 @@ class rfidUtils
 	rfid_card_type getCardType();
 	int * getCardSerial();
 	int * readBlock(int blockNum, rfid_card_type cardType, rfid_key_type keyType, byte key[5]);
+	int * readSector(int sector, rfid_card_type cType, rfid_key_type kType, byte key[5]);
 	int * readEEPROM(byte addrHigh, byte addrLow, byte dtLen);
 #pragma endregion
 
 
 	bool setMode(rfid_mode mode);
   private:
-	int readAll(int*& buffer);
+	int readAll(int*& outputBuff, char sz = -1);
 	uint8_t _pin_tx;
 	uint8_t _pin_rx;
 
