@@ -84,15 +84,20 @@ int rfidUtils::readAll(int*& outputBuff, char sz){
 	while (this->available()) {
 		int c = this->read();
 		if (sz > -1){
-			if (sz == (tmpLen + 1)) break; //Enough bytes have been red
+			if (sz == (tmpLen + 1)) {
+				Serial.print("BREAKING");
+				break; //Enough bytes have been red
+			}
 		}
 		if (c != 0xff && this->printResponse){
-			if (out_flag == 0) Serial.print("response: ");
+			if (out_flag == 0) Serial.print("resp: ");
 			if (c < 16) Serial.print("0");
-			Serial.print(c, HEX); Serial.print(" "); 		
+			Serial.print(c, HEX); Serial.print(""); 		
 		}
 		out_flag = true; buffer[tmpLen++] = c;
 	}
+	return NULL;
+	if(tmpLen>0) Serial.println("x1");
 	if (out_flag && this->printResponse) Serial.println();
 	if (tmpLen == 1){
 		if (buffer[0] == 0xFF && this->MODE != DETECT) Serial.print(buffer[0]);  Serial.println("INVALID COMMAND!");

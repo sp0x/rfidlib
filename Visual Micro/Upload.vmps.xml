@@ -8,6 +8,30 @@
     <VCCodeModel>
       <VCCodeMacros />
     </VCCodeModel>
-    <BreakPoints />
+    <BreakPoints>
+      <BreakPoint Index="1" Name="rfidUtils.cpp, line 94" Id="f11498be-054e-4cf3-8e7c-7a7c5a5dd463" Enabled="1" Message="{freeMemory()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="g:\dev\arduino\rfidlib\rfidutils.cpp" FileLine="94" FileColumn="1" FunctionName="readAll(int*&amp; outputBuff, char sz)" FunctionLineOffset="19" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='aa417e78-8a93-4e08-972a-51293204a602'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>87				if (sz == (tmpLen + 1)) {
+88					Serial.print("BREAKING");
+89					break; //Enough bytes have been red
+90				}
+91			}
+92			if (c != 0xff &amp;&amp; this-&gt;printResponse){
+93				if (out_flag == 0) Serial.print("resp: ");
+--&gt;94				if (c &lt; 16) Serial.print("0");
+95				Serial.print(c, HEX); Serial.print(""); 		
+96			}
+97			out_flag = true; buffer[tmpLen++] = c;
+98		}
+99		return NULL;
+100		if(tmpLen&gt;0) Serial.println("x1");
+101		if (out_flag &amp;&amp; this-&gt;printResponse) Serial.println();
+102		if (tmpLen == 1){
+103			if (buffer[0] == 0xFF &amp;&amp; this-&gt;MODE != DETECT) Serial.print(buffer[0]);  Serial.println("INVALID COMMAND!");
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="freeMemory()" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+    </BreakPoints>
   </Program>
 </VisualMicro>

@@ -10,6 +10,7 @@ int comlen = 0;
 int out_flag = 0;
 //SoftwareSerial mySerial(2, 3); //pin2 Rx, pin3 Tx
 rfidUtils rfid;
+SoftwareSerial salt(13,12);
 #pragma endregion
 
 
@@ -17,6 +18,7 @@ void setup()
 {
     // Open serial communications and wait for port to open:
     Serial.begin(115200);
+	salt.begin(115200);
     rfid = rfidUtils(3,2);
     Serial.println("Serial number will be displayed here if a card is detected by the module:\n");
     delay(10);
@@ -25,9 +27,10 @@ void setup()
 }
 
 byte*cmdbuff = new byte[32];
+int ixi = 0;
 void loop()
 {
-    int rbCount = 0;
+	int rbCount = 0;
     int * rbuff;
     size_t cmdsz = 0;
     while (Serial.available())
