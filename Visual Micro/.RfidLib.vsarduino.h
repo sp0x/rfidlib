@@ -45,9 +45,10 @@ int * processCommand(byte*cmd, size_t cmdSz, int & resSz);
 
 #include "g:\ides\arduino\hardware\arduino\cores\arduino\arduino.h"
 #include "g:\ides\arduino\hardware\arduino\variants\standard\pins_arduino.h" 
+#include "G:\Dev\Arduino\RfidLib\rfidLib.ino"
 #include "G:\Dev\Arduino\RfidLib\MemoryFree.cpp"
 #include "G:\Dev\Arduino\RfidLib\MemoryFree.h"
-#include "G:\Dev\Arduino\RfidLib\RfidLib.ino"
+#include "G:\Dev\Arduino\RfidLib\Serialx.h"
 #include "G:\Dev\Arduino\RfidLib\rfidUtils.cpp"
 #include "G:\Dev\Arduino\RfidLib\rfidUtils.h"
 #endif

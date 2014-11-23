@@ -8,6 +8,11 @@ int toInt(uchar * b, size_t offset){
 int toShort(int * b, size_t offset){
 	return (int)((int)b[offset + 0] << 8) | (int)((int)b[offset + 1]);
 }
+template<typename tVal>
+inline String toBase(tVal chr, unsigned char base = '\n'){
+	return String(chr, base);
+}
+
 void printall(int *arr, int len){
 	for (int i = 0; i < len; i++){
 		Serial.print(arr[i], HEX); Serial.print(" ");
@@ -15,12 +20,15 @@ void printall(int *arr, int len){
 	Serial.println();
 }
 
+
+
 #pragma region Construct
 rfidUtils::rfidUtils(uint8_t rx, uint8_t tx, bool useAlt)
 {
 	this->serial = new SoftwareSerial(rx, tx);
+	this->defSerial = new Serialx(Serial);
 	if (useAlt){
-		this->altSerial = new SoftwareSerial(PIN_ALT_RX, PIN_ALT_TX);
+		this->altSerial = new Serialx(PIN_ALT_RX, PIN_ALT_TX, S_SOFTWARE);
 		this->altSerial->begin(9600);
 		Serial.println("Using additional alt!");
 	}
@@ -102,7 +110,6 @@ int rfidUtils::readAll(int*& outputBuff, int maxLen){
 		out_flag = true; buffer[tmpLen++] = c;
 	}
 	if (out_flag && this->printResponse) print("",0,true);
-	if(tmpLen>0) Serial.println("x1");
 	if (tmpLen == 1){
 		if (buffer[0] == 0xFF && this->MODE != DETECT) print(buffer[0]);  print("INVALID COMMAND!",0,true);
 	}
@@ -158,41 +165,12 @@ void rfidUtils::waitForResponse(){
 	}
 }
 
-void rfidUtils::print(const char arg[], int base, bool endl){
-	if (endl) {
-		if (base) Serial.println(*arg, base); else Serial.println(arg);
-	}
-	else{
-		if (base) Serial.print(*arg, base); else Serial.print(arg);
-	}
-	Serial.println((int)this->altSerial);
+void rfidUtils::print(const char arg[], unsigned char base, bool endl){
+	Serial << (based(arg, base)) << boolint(endl)*'\n';
 	if (this->altSerial != NULL){
-		if (endl) {
-			if (base) this->altSerial->println(*arg, base); else this->altSerial->println(arg);
-		}
-		else{
-			if (base) this->altSerial->print(*arg, base); else this->altSerial->print(arg);
-		}
+		*this->altSerial << based(arg, base) << boolint(endl)*'\n';
 	}
 }
-void rfidUtils::print(float arg, int base,  bool endl){
-	if (endl) {
-		if (base) Serial.println(arg, base); else Serial.println(arg);
-	}
-	else{
-		if (base) Serial.print(arg, base); else Serial.print(arg);
-	}
-	Serial.println((int)this->altSerial);
-	if (this->altSerial != NULL){
-		if (endl) {
-			if (base) this->altSerial->println(arg, base); else this->altSerial->println(arg);
-		}
-		else{
-			if (base) this->altSerial->print(arg, base); else this->altSerial->print(arg);
-		}
-	}
-}
-
 #pragma endregion
 
 

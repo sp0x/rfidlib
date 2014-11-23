@@ -11,7 +11,7 @@
 #define OPSIZE (sizeof(unsigned char))
 #define OPSZ(ops) ( OPSIZE * (ops) )
 #define MEMSZ(var) ( sizeof(var) * var)
-
+#define boolint(var) (var ?  1 : 0)
 
 
 typedef unsigned char uchar;
@@ -34,17 +34,43 @@ enum rfid_cmd{
 	RESET_CFG, RESET
 };
 
+struct based{
+	String value;
+	based(long var, unsigned char base = 0){
+		if (base == 0) base = 10;
+		this->value = String(var, base);
+	}
+	based(const char * val, unsigned char base = 0){
+		this->value = val;
+	}
+};
+
 
 /*Converts a byte array to 4byte WORD */
 int toInt(uchar * arr, size_t offset);
 int toShort(int * b, size_t offset);
 void printall(int *arr, int len);
+template<typename tVal>
+inline void toBase(tVal chr, unsigned char base = '\n');
+
+
+
+
 
 class rfidUtils
 {
+
+private:
+	int readAll(int*& outputBuff, int sz = 0);
+	uint8_t _pin_tx;
+	uint8_t _pin_rx;
+	Serialx * altSerial;
+	Serialx * defSerial;
+
   public:
 	rfidUtils(uint8_t rx, uint8_t tx, bool useAlt = false);
 	rfidUtils();
+
 #pragma region Variables
 	bool printResponse;
 	bool locked;
@@ -55,23 +81,29 @@ class rfidUtils
 	rfid_mode MODE;
 
 #pragma endregion
+
 #pragma region Locking
 	void lock();
 	void unlock();
 #pragma endregion
+
 #pragma region IO
 	size_t write(const char * chr);
 	size_t write(uint8_t chr);
 	size_t write(uint8_t * buff, size_t len);
 	int read();
-	void print(const char *arg, int base =0 , bool endl	= false );
-	void print(float arg, int base = 0 , bool endl = false);
+	void print(const char *arg, unsigned char base = 0, bool endl = false);
+	void print(float arg, unsigned char base = 0, bool endl = false);
+
+
 	int GetInput(int*& outputBuff);
 	int available();
 
 	int parseInput(byte input);
 	int* parseInput(byte * cmdbytes, int & size);
 	void waitForResponse();
+
+
 #pragma endregion
 
 #pragma region Commands
@@ -94,13 +126,6 @@ class rfidUtils
 
 
 	bool setMode(rfid_mode mode);
-  private:
-	int readAll(int*& outputBuff, int sz = 0);
-	uint8_t _pin_tx;
-	uint8_t _pin_rx;
-	SoftwareSerial * altSerial;
-
-
 
 };
 
