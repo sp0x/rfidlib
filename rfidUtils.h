@@ -4,6 +4,8 @@
 #include <SoftwareSerial.h>
 #include "MemoryFree.h"
 
+#define PIN_ALT_RX 12
+#define PIN_ALT_TX 13
 #define MAX_RESPONSE_LEN 64
 #define RFID_READ_LOCKED -2
 #define OPSIZE (sizeof(unsigned char))
@@ -41,7 +43,7 @@ void printall(int *arr, int len);
 class rfidUtils
 {
   public:
-	rfidUtils(uint8_t rx, uint8_t tx);
+	rfidUtils(uint8_t rx, uint8_t tx, bool useAlt = false);
 	rfidUtils();
 #pragma region Variables
 	bool printResponse;
@@ -62,6 +64,8 @@ class rfidUtils
 	size_t write(uint8_t chr);
 	size_t write(uint8_t * buff, size_t len);
 	int read();
+	void print(const char *arg, int base =0 , bool endl	= false );
+	void print(float arg, int base = 0 , bool endl = false);
 	int GetInput(int*& outputBuff);
 	int available();
 
@@ -91,9 +95,10 @@ class rfidUtils
 
 	bool setMode(rfid_mode mode);
   private:
-	int readAll(int*& outputBuff, char sz = -1);
+	int readAll(int*& outputBuff, int sz = 0);
 	uint8_t _pin_tx;
 	uint8_t _pin_rx;
+	SoftwareSerial * altSerial;
 
 
 

@@ -16,9 +16,15 @@ void printall(int *arr, int len){
 }
 
 #pragma region Construct
-rfidUtils::rfidUtils(uint8_t rx, uint8_t tx)
+rfidUtils::rfidUtils(uint8_t rx, uint8_t tx, bool useAlt)
 {
 	this->serial = new SoftwareSerial(rx, tx);
+	if (useAlt){
+		this->altSerial = new SoftwareSerial(PIN_ALT_RX, PIN_ALT_TX);
+		this->altSerial->begin(9600);
+		Serial.println("Using additional alt!");
+	}
+	else this->altSerial = NULL;
 	this->serial->begin(9600);
 	this->comlen=0;
 	this->out_flag = 0;
@@ -73,7 +79,7 @@ int rfidUtils::GetInput(int*& outputBuff){
 /*
 Reads all output from the module and returns the lenght of the read data.
 */
-int rfidUtils::readAll(int*& outputBuff, char sz){
+int rfidUtils::readAll(int*& outputBuff, int maxLen){
 	bool out_flag = false;
 	static int* buffer;
 	if (outputBuff == NULL){
@@ -82,36 +88,24 @@ int rfidUtils::readAll(int*& outputBuff, char sz){
 	buffer = outputBuff;
 	int tmpLen=0;
 	while (this->available()) {
-		int c = this->read();
-		if (sz > -1){
-			if (sz == (tmpLen + 1)) {
-				Serial.print("BREAKING");
-				break; //Enough bytes have been red
-			}
+		if (maxLen > 0){
+			if (tmpLen >= maxLen) return tmpLen;
 		}
+		int c = this->read();
 		if (c != 0xff && this->printResponse){
-			if (out_flag == 0) Serial.print("resp: ");
-			if (c < 16) Serial.print("0");
-			Serial.print(c, HEX); Serial.print(""); 		
+			if (out_flag == 0) {
+				print((float)millis() / 1000); print(" "); print("response: ");
+			}
+			if (c < 16) print("0");
+			print(c, HEX); print(" "); 		
 		}
 		out_flag = true; buffer[tmpLen++] = c;
 	}
-	return NULL;
+	if (out_flag && this->printResponse) print("",0,true);
 	if(tmpLen>0) Serial.println("x1");
-	if (out_flag && this->printResponse) Serial.println();
 	if (tmpLen == 1){
-		if (buffer[0] == 0xFF && this->MODE != DETECT) Serial.print(buffer[0]);  Serial.println("INVALID COMMAND!");
+		if (buffer[0] == 0xFF && this->MODE != DETECT) print(buffer[0]);  print("INVALID COMMAND!",0,true);
 	}
-	//if (tmpLen > 0)//there was output
-	//{	
-	//	if (outputBuff == NULL){
-	//		outputBuff = buffer;
-	//	}
-	//	else{
-	//		memcpy(outputBuff, buffer, sizeof(int) * tmpLen);
-	//		free(buffer);
-	//	}
-	//}
 	return tmpLen;
 }
 
@@ -163,6 +157,42 @@ void rfidUtils::waitForResponse(){
 		delay(1);
 	}
 }
+
+void rfidUtils::print(const char arg[], int base, bool endl){
+	if (endl) {
+		if (base) Serial.println(*arg, base); else Serial.println(arg);
+	}
+	else{
+		if (base) Serial.print(*arg, base); else Serial.print(arg);
+	}
+	Serial.println((int)this->altSerial);
+	if (this->altSerial != NULL){
+		if (endl) {
+			if (base) this->altSerial->println(*arg, base); else this->altSerial->println(arg);
+		}
+		else{
+			if (base) this->altSerial->print(*arg, base); else this->altSerial->print(arg);
+		}
+	}
+}
+void rfidUtils::print(float arg, int base,  bool endl){
+	if (endl) {
+		if (base) Serial.println(arg, base); else Serial.println(arg);
+	}
+	else{
+		if (base) Serial.print(arg, base); else Serial.print(arg);
+	}
+	Serial.println((int)this->altSerial);
+	if (this->altSerial != NULL){
+		if (endl) {
+			if (base) this->altSerial->println(arg, base); else this->altSerial->println(arg);
+		}
+		else{
+			if (base) this->altSerial->print(arg, base); else this->altSerial->print(arg);
+		}
+	}
+}
+
 #pragma endregion
 
 
