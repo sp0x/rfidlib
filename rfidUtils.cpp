@@ -102,16 +102,22 @@ int rfidUtils::readAll(int*& outputBuff, int maxLen){
 		int c = this->read();
 		if (c != 0xff && this->printResponse){
 			if (out_flag == 0) {
-				print((float)millis() / 1000); print(" "); print("response: ");
+				print((float)millis() / 1000);
+				print(" ");
+				print("response: ");
 			}
 			if (c < 16) print("0");
-			print(c, HEX); print(" "); 		
+			print( c, (unsigned char)HEX); print(" "); 		
 		}
 		out_flag = true; buffer[tmpLen++] = c;
 	}
-	if (out_flag && this->printResponse) print("",0,true);
+	if (out_flag && this->printResponse) {
+		print("", 0, true);
+	}
 	if (tmpLen == 1){
-		if (buffer[0] == 0xFF && this->MODE != DETECT) print(buffer[0]);  print("INVALID COMMAND!",0,true);
+		if (buffer[0] == 0xFF && this->MODE != DETECT) {
+			this->print(buffer[0]);  print("INVALID COMMAND!", 0, true);
+		}
 	}
 	return tmpLen;
 }
@@ -165,8 +171,23 @@ void rfidUtils::waitForResponse(){
 	}
 }
 
-void rfidUtils::print(const char arg[], unsigned char base, bool endl){
-	Serial << (based(arg, base)) << boolint(endl)*'\n';
+void rfidUtils::print(const char arg[], unsigned char base2, bool endl){
+	if(strlen(arg)>0) *defSerial << (based(arg, base2));
+	*defSerial << boolint(endl)*'\n';
+	if (this->altSerial != NULL){
+		*this->altSerial << based(arg, base2) << boolint(endl)*'\n';
+	}
+}
+void rfidUtils::print(int arg, unsigned char base, bool endl){
+	*defSerial << (based(arg, base));
+	*defSerial << boolint(endl)*'\n';
+	if (this->altSerial != NULL){
+		*this->altSerial << based(arg, base) << boolint(endl)*'\n';
+	}
+}
+void rfidUtils::print(float arg, unsigned char base, bool endl){
+	*defSerial << (based(arg, base));
+	*defSerial << boolint(endl)*'\n';
 	if (this->altSerial != NULL){
 		*this->altSerial << based(arg, base) << boolint(endl)*'\n';
 	}

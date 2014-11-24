@@ -51,4 +51,5 @@ int * processCommand(byte*cmd, size_t cmdSz, int & resSz);
 #include "G:\Dev\Arduino\RfidLib\Serialx.h"
 #include "G:\Dev\Arduino\RfidLib\rfidUtils.cpp"
 #include "G:\Dev\Arduino\RfidLib\rfidUtils.h"
+#include "G:\Dev\Arduino\RfidLib\std.h"
 #endif

@@ -1,5 +1,7 @@
 #include <SoftwareSerial.h>
+#include <stdlib.h>
 #include "MemoryFree.h"
+#include "std.h"
 #include "rfidUtils.h"
 #include "Serialx.h"
 
@@ -11,7 +13,7 @@ int comlen = 0;
 int out_flag = 0;
 //SoftwareSerial mySerial(2, 3); //pin2 Rx, pin3 Tx
 rfidUtils * rfid;
-SoftwareSerial salt(13,12);
+//SoftwareSerial salt(13,12);
 #pragma endregion
 
 
@@ -19,8 +21,8 @@ void setup()
 {
     // Open serial communications and wait for port to open:
     Serial.begin(115200);
-	salt.begin(115200);
-    rfid = new rfidUtils(3,2);
+	//salt.begin(115200);
+    rfid = new rfidUtils(3,2, true);
     Serial.println("Serial number will be displayed here if a card is detected by the module:\n");
     delay(10);
     rfid->setMode(READ_SERIALS);

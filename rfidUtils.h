@@ -3,6 +3,7 @@
 #include "Arduino.h"
 #include <SoftwareSerial.h>
 #include "MemoryFree.h"
+#include "Serialx.h"
 
 #define PIN_ALT_RX 12
 #define PIN_ALT_TX 13
@@ -34,17 +35,6 @@ enum rfid_cmd{
 	RESET_CFG, RESET
 };
 
-struct based{
-	String value;
-	based(long var, unsigned char base = 0){
-		if (base == 0) base = 10;
-		this->value = String(var, base);
-	}
-	based(const char * val, unsigned char base = 0){
-		this->value = val;
-	}
-};
-
 
 /*Converts a byte array to 4byte WORD */
 int toInt(uchar * arr, size_t offset);
@@ -64,10 +54,10 @@ private:
 	int readAll(int*& outputBuff, int sz = 0);
 	uint8_t _pin_tx;
 	uint8_t _pin_rx;
-	Serialx * altSerial;
-	Serialx * defSerial;
+	Serialx* altSerial;
+	Serialx* defSerial;
 
-  public:
+public:
 	rfidUtils(uint8_t rx, uint8_t tx, bool useAlt = false);
 	rfidUtils();
 
@@ -92,9 +82,9 @@ private:
 	size_t write(uint8_t chr);
 	size_t write(uint8_t * buff, size_t len);
 	int read();
-	void print(const char *arg, unsigned char base = 0, bool endl = false);
-	void print(float arg, unsigned char base = 0, bool endl = false);
-
+	void print(const char *arg,	unsigned char base = 0, bool endl = false);
+	void print(float arg,		unsigned char base = 0, bool endl = false);
+	void print(int arg,			unsigned char base = 0,	bool endl = false);
 
 	int GetInput(int*& outputBuff);
 	int available();
