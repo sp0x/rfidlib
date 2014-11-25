@@ -30,17 +30,14 @@ rfidUtils::rfidUtils(uint8_t rx, uint8_t tx, bool useAlt)
 	if (useAlt){
 		this->altSerial = new Serialx(PIN_ALT_RX, PIN_ALT_TX, S_SOFTWARE);
 		this->altSerial->begin(9600);
-		Serial.println("Using additional alt!");
 	}
 	else this->altSerial = NULL;
 	this->serial->begin(9600);
 	this->comlen=0;
 	this->out_flag = 0;
-	unlock();
 	printResponse = true;
 }
 rfidUtils::rfidUtils(){
-	unlock();
 	printResponse = true;
 }
 #pragma endregion
@@ -78,10 +75,6 @@ int rfidUtils::read(){
 
 
 int rfidUtils::GetInput(int*& outputBuff){
-	if (this->locked) {
-		Serial.println("RFID IS LOCKED!");
-		return RFID_READ_LOCKED;
-	}
 	return this->readAll(outputBuff);
 }
 /*
@@ -109,7 +102,8 @@ int rfidUtils::readAll(int*& outputBuff, int maxLen){
 			if (c < 16) print("0");
 			print( c, (unsigned char)HEX); print(" "); 		
 		}
-		out_flag = true; buffer[tmpLen++] = c;
+		out_flag = true; 
+		buffer[tmpLen++] = c;
 	}
 	if (out_flag && this->printResponse) {
 		print("", 0, true);
@@ -171,27 +165,25 @@ void rfidUtils::waitForResponse(){
 	}
 }
 
-void rfidUtils::print(const char arg[], unsigned char base2, bool endl){
-	if(strlen(arg)>0) *defSerial << (based(arg, base2));
-	*defSerial << boolint(endl)*'\n';
+template <typename tArg>
+void rfidUtils::print(tArg arg, unsigned char base2, bool endl){
+	*defSerial << (based(arg, base2, endl));
 	if (this->altSerial != NULL){
-		*this->altSerial << based(arg, base2) << boolint(endl)*'\n';
+		*this->altSerial << based(arg, base2, endl);
 	}
 }
-void rfidUtils::print(int arg, unsigned char base, bool endl){
-	*defSerial << (based(arg, base));
-	*defSerial << boolint(endl)*'\n';
-	if (this->altSerial != NULL){
-		*this->altSerial << based(arg, base) << boolint(endl)*'\n';
-	}
-}
-void rfidUtils::print(float arg, unsigned char base, bool endl){
-	*defSerial << (based(arg, base));
-	*defSerial << boolint(endl)*'\n';
-	if (this->altSerial != NULL){
-		*this->altSerial << based(arg, base) << boolint(endl)*'\n';
-	}
-}
+//void rfidUtils::print(int arg, unsigned char base, bool endl){
+//	*defSerial << (based(arg, base, endl));
+//	if (this->altSerial != NULL){
+//		*this->altSerial << based(arg, base, endl);
+//	}
+//}
+//void rfidUtils::print(float arg, unsigned char base, bool endl){
+//	*defSerial << (based(arg, base,endl));
+//	if (this->altSerial != NULL){
+//		*this->altSerial << based(arg, base,endl);
+//	}
+//}
 #pragma endregion
 
 
@@ -290,14 +282,6 @@ size_t rfidUtils::getCmdLen(rfid_cmd cmd){
 
 
 #pragma region Command utils 
-void rfidUtils::lock(){
-	this->locked = true;
-}
-void rfidUtils::unlock(){
-	this->locked = !true;
-}
-
-
 
 rfid_card_type rfidUtils::getCardType(){
 	int rlen;

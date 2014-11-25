@@ -47,7 +47,7 @@
       <AdditionalIncludeDirectories>g:\ides\arduino\hardware\arduino\cores\arduino;g:\ides\arduino\hardware\arduino\variants\standard;g:\ides\arduino\libraries\SoftwareSerial;g:\ides\arduino\libraries\SoftwareSerial\utility;g:\ides\arduino\libraries;g:\ides\arduino\hardware\arduino\libraries;C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\Sp0x\Documents\Arduino\libraries;g:\ides\arduino\hardware\tools\avr\avr\include\;g:\ides\arduino\hardware\tools\avr\avr\include\avr\;g:\ides\arduino\hardware\tools\avr\avr\;g:\ides\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>G:\Dev\Arduino\RfidLib\Visual Micro\.RfidLib.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;ARDUINO=105;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;ARDUINO=105;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

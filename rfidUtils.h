@@ -7,8 +7,8 @@
 
 #define PIN_ALT_RX 12
 #define PIN_ALT_TX 13
+
 #define MAX_RESPONSE_LEN 64
-#define RFID_READ_LOCKED -2
 #define OPSIZE (sizeof(unsigned char))
 #define OPSZ(ops) ( OPSIZE * (ops) )
 #define MEMSZ(var) ( sizeof(var) * var)
@@ -63,18 +63,12 @@ public:
 
 #pragma region Variables
 	bool printResponse;
-	bool locked;
 	SoftwareSerial* serial;
-	int CMD[64];
+	int CMD[32];
 	int comlen;
 	int out_flag;
 	rfid_mode MODE;
 
-#pragma endregion
-
-#pragma region Locking
-	void lock();
-	void unlock();
 #pragma endregion
 
 #pragma region IO
@@ -82,9 +76,11 @@ public:
 	size_t write(uint8_t chr);
 	size_t write(uint8_t * buff, size_t len);
 	int read();
-	void print(const char *arg,	unsigned char base = 0, bool endl = false);
+	template <typename tArg>
+	void print(tArg arg, unsigned char base = 0, bool endl = false);
+	/*
 	void print(float arg,		unsigned char base = 0, bool endl = false);
-	void print(int arg,			unsigned char base = 0,	bool endl = false);
+	void print(int arg,			unsigned char base = 0,	bool endl = false);*/
 
 	int GetInput(int*& outputBuff);
 	int available();

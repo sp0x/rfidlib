@@ -20,8 +20,8 @@ rfidUtils * rfid;
 void setup()
 {
     // Open serial communications and wait for port to open:
-    Serial.begin(115200);
-	//salt.begin(115200);
+    Serial.begin(9600);
+	//salt.begin(9600);
     rfid = new rfidUtils(3,2, true);
     Serial.println("Serial number will be displayed here if a card is detected by the module:\n");
     delay(10);

@@ -16,21 +16,7 @@ private:
 	unsigned char serialType;
 
 public:
-
-	void begin(long speed){
-		switch (this->serialType){
-		case 1:
-			this->begin(speed);
-			break;
-		case 2:
-			((HardwareSerial*)hwSerial)->begin(speed);
-			break;
-		}
-		
-	}
-
-
-
+#pragma region Construction
 	Serialx(const SoftwareSerial& ser) 
 		: SoftwareSerial(ser) {
 		this->serialType = S_SOFTWARE;
@@ -40,18 +26,18 @@ public:
 		this->serialType = S_HARDWARE;
 		this->hwSerial = (void*)&hser;
 	}
+	///software serial bug here..
 	Serialx(unsigned char rx, unsigned char tx, unsigned char stype, bool inverse = false )  
 		: SoftwareSerial(rx,tx, inverse) {
-		switch (stype){
-		case 1:	this->hwSerial = new SoftwareSerial(rx, tx, inverse); break;
-		case 2:
-			break;
-			//not implemented
-		}
 		this->serialType = stype;
 	}
+#pragma endregion
 
+#pragma region Public methods
+	using SoftwareSerial::begin;
+#pragma endregion
 
+#pragma region Operators
 
 	friend Serialx& operator << (Serialx& ser, based val){
 		switch (ser.serialType){
@@ -65,6 +51,10 @@ public:
 		case 2: ((HardwareSerial*)ser.hwSerial)->print(val); break;
 		}
 	}
+
+#pragma endregion
+
+
 };
 
 
